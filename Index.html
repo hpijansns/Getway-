@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pay ₹1 to Riyana</h1>
+    <p>Select your payment method:</p>
+    <button onclick="payUsingPhonePe()">Pay via PhonePe</button>
+    <button onclick="payUsingGooglePay()">Pay via Google Pay</button>
+    <button onclick="payUsingPaytm()">Pay via Paytm</button>
+
+    <script>
+        function payUsingPhonePe() {
+            window.location.href = "upi://pay?pa=7627055204@axl&pn=Riyana&tn=TestPayment&am=1&cu=INR";
+        }
+
+        function payUsingGooglePay() {
+            window.location.href = "upi://pay?pa=mohitrajpura9@okhdfcbank&pn=Riyana&tn=TestPayment&am=1&cu=INR";
+        }
+
+        function payUsingPaytm() {
+            window.location.href = "upi://pay?pa=7627055204@ptyes&pn=Riyana&tn=TestPayment&am=1&cu=INR";
+        }
+    </script>
+</body>
+</html>
